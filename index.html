@@ -57,6 +57,18 @@ var nlcdTiles = L.mapbox.tileLayer('gscplanning.scottCo_landcover').addTo(map);
 var nlcdGrid = L.mapbox.gridLayer('gscplanning.scottCo_landcover').addTo(map);
 var nlcdControl = L.mapbox.gridControl(nlcdGrid).addTo(map);
 
+
+var scBounds
+var scStyle = {
+	"color": "#000",
+	"weight": 3,
+	"opacity": 0.5
+}
+// $.getJSON("data/sc-bounds.geojson", function(data) {
+// 	scBounds = new L.geoJson(data, {
+// 		style: scStyle
+// 	}).addTo(map);
+
 map.setView([38.317236, -84.564147], 11);
 // Add custom legend:https://www.mapbox.com/mapbox.js/example/v1.0.0/custom-legend/
 map.legendControl.addLegend(document.getElementById('legend').innerHTML);
