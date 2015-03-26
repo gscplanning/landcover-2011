@@ -1,0 +1,83 @@
+.my-legend .legend-title {
+	text-align: left;
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 90%;
+}
+.my-legend .legend-scale ul {
+	margin: 0;
+	margin-bottom: 5px;
+	padding: 0;
+	float: left;
+	list-style: none;
+}
+.my-legend .legend-scale ul li {
+	font-size: 80%;
+	list-style: none;
+	margin-left: 0;
+	line-height: 18px;
+	margin-bottom: 2px;
+}
+.my-legend ul.legend-labels li span {
+	display: block;
+	float: left;
+	height: 16px;
+	width: 30px;
+	margin-right: 5px;
+	margin-left: 0;
+}
+.my-legend .legend-source {
+	font-size: 70%;
+	color: #999;
+	clear: both;
+}
+.my-legend a {
+	color: #777;
+}
+
+/*patches*/
+#v11 {
+	background-color: rgb(71, 107, 160);
+}
+#v21 {
+	background-color: rgb(221,201,201);
+}
+#v22{
+	background-color: rgb(216,147,130);
+}
+#v23 {
+	background-color: rgb(237,0,0);
+}
+#v24 {
+	background-color: rgb(170,0,0);
+}
+#v31 {
+	background-color: rgb(178,173,163);
+}
+#v41 {
+	background-color: rgb(104,170,99);
+}
+#v42 {
+	background-color: rgb(28,99,48);
+}
+#v43 {
+	background-color: rgb(181,201,142);
+}
+#v52 {
+	background-color: rgb(204,186,124);
+}
+#v71 {
+	background-color: rgb(226,226,193);
+}
+#v81 {
+	background-color: rgb(219,216,61);
+}
+#v82 {
+	background-color: rgb(170,112,40);
+}
+#v90 {
+	background-color: rgb(186,216,234);
+}
+#v95 {
+	background-color: rgb(112,163,186);
+}
