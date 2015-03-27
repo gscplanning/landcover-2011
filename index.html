@@ -79,14 +79,21 @@ var labels = L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.{e
 // Add a GeoJSON outline of Scott County
 // http://leafletjs.com/examples/geojson.html
 // http://lyzidiamond.com/posts/external-geojson-and-leaflet-the-other-way/
+// This needs to be a LineString rather than a polygon
+// The inside of a polygon, even if opacity is set to 0, will obscure the UTF grid's ability to be clicked
+// To convert Polygon -> LineString, in the geojson:
+// 1. "geometry": { "type": "Polygon" -> "geometry": { "type": "LineString"
+// 2. Remove one of the first two brackets here "coordinates": [ [ [
+// 3. Remove one of the last two brackets here ...38.473038816698754 ] ] ]
+// https://www.mapbox.com/guides/master-web-map-layers/
+// http://www.macwright.org/#linestrings
 var scBounds
 var scStyle = {
 	"color": "#000",
 	"weight": 3,
 	"opacity": 0.5,
-	"fillOpacity": 0
 }
-$.getJSON("data/sc-bounds.geojson", function(data) {
+$.getJSON("data/sc-bounds_ln.geojson", function(data) {
 	scBounds = new L.geoJson(data, {
 		style: scStyle
 	}).addTo(map);
